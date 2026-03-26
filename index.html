@@ -1,0 +1,1017 @@
+<html class="light" lang="uz">
+
+<head></head>
+
+<body class="bg-background font-body text-on-background selection:bg-secondary-container overflow-x-hidden">
+
+
+
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Renessans Universiteti | Aqlli Kampus - Navro'z Muborak!</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-high": "#e7e8e9",
+            "surface-container-highest": "#e1e3e4",
+            "on-secondary-container": "#785a1a",
+            "primary-fixed-dim": "#b3c5ff",
+            "surface-bright": "#f8f9fa",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "primary": "#00113a",
+            "secondary-fixed-dim": "#e9c176",
+            "outline": "#757682",
+            "on-background": "#191c1d",
+            "on-surface-variant": "#444650",
+            "inverse-on-surface": "#f0f1f2",
+            "inverse-primary": "#b3c5ff",
+            "surface-variant": "#e1e3e4",
+            "on-tertiary-fixed": "#00201f",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#00174a",
+            "surface-container-low": "#f3f4f5",
+            "on-primary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "error": "#ba1a1a",
+            "tertiary": "#001717",
+            "inverse-surface": "#2e3132",
+            "error-container": "#ffdad6",
+            "surface-tint": "#435b9f",
+            "primary-fixed": "#dbe1ff",
+            "tertiary-fixed-dim": "#95d1ce",
+            "on-tertiary-fixed-variant": "#084f4d",
+            "secondary": "#775a19",
+            "on-primary-container": "#758dd5",
+            "surface-dim": "#d9dadb",
+            "secondary-fixed": "#ffdea5",
+            "on-secondary-fixed-variant": "#5d4201",
+            "on-tertiary-container": "#5f9a97",
+            "on-primary-fixed-variant": "#2a4386",
+            "outline-variant": "#c5c6d2",
+            "on-surface": "#191c1d",
+            "secondary-container": "#fed488",
+            "surface-container": "#edeeef",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed": "#b1eeea",
+            "on-secondary-fixed": "#261900",
+            "tertiary-container": "#002e2d",
+            "background": "#f8f9fa",
+            "primary-container": "#002366",
+            "surface": "#f8f9fa",
+            "spring-green": "#4ade80",
+            "blossom-pink": "#fce7f3"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+    }
+
+    .spring-bg-ornament {
+      background-image: radial-gradient(#4ade80 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.1;
+    }
+
+    .oneimg {
+      position: fixed;
+      bottom: 5%;
+      left: 10px;
+      width: 330px;
+      height: 300px;
+      z-index: 10;
+    }
+
+    body {
+      background-image: url("./image.png"), opacity(0.5);
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @keyframes kite-float {
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(5deg);
+      }
+
+      33% {
+        transform: translate(30px, -40px) rotate(-5deg);
+      }
+
+      66% {
+        transform: translate(-20px, -20px) rotate(10deg);
+      }
+    }
+
+    .kite-animate {
+      animation: kite-float 10s ease-in-out infinite;
+    }
+
+    .kite-string-line {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw-string 3s ease-out forwards;
+    }
+
+    @keyframes draw-string {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .kite-animate-delay {
+      animation: kite-float 10s ease-in-out infinite;
+      animation-delay: -3s;
+    }
+
+    /* Blossom/Branch Sway */
+    @keyframes branch-sway {
+
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(3deg);
+      }
+    }
+
+    .branch-sway {
+      animation: branch-sway 4s ease-in-out infinite;
+      transform-origin: bottom right;
+    }
+
+    /* Floating Blossom Petals */
+    @keyframes petal-fall {
+      0% {
+        transform: translate(0, -10px) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(100px, 100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .petal {
+      position: absolute;
+      pointer-events: none;
+      animation: petal-fall 12s linear infinite;
+    }
+
+    .nav-leaf-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+    }
+
+    /* Barcha bo'limlar uchun o'ng tarafdan chiqqan daraxt shoxi */
+    section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: clamp(200px, 35vw, 450px);
+      height: clamp(200px, 35vw, 450px);
+      background-image: url('./daraht_shoxi.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top right;
+      z-index: 5;
+      opacity: 0.85;
+      pointer-events: none;
+      animation: branch-sway 6s ease-in-out infinite;
+      transform-origin: top right;
+      mix-blend-mode: multiply;
+      /* Oq fondagi rasmni shaffof qilish uchun */
+    }
+
+    /* Ayrim bo'limlar uchun overflow va position: relative ni kafolatlash */
+    header,
+    section {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+  </style>
+  <!-- Decorative Falling Petals Layer -->
+  <div class="fixed inset-0 pointer-events-none z-10 overflow-hidden">
+    <div class="petal text-spring-green/20" style="left: 10%; animation-delay: 0s;"><span
+        class="material-symbols-outlined text-xs">filter_vintage</span></div>
+    <div class="petal text-blossom-pink/40" style="left: 30%; animation-delay: 4s;"><span
+        class="material-symbols-outlined text-sm">filter_vintage</span></div>
+    <div class="petal text-spring-green/20" style="left: 55%; animation-delay: 8s;"><span
+        class="material-symbols-outlined text-xs">filter_vintage</span></div>
+    <div class="petal text-blossom-pink/40" style="left: 80%; animation-delay: 2s;"><span
+        class="material-symbols-outlined text-sm">filter_vintage</span></div>
+  </div>
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
+    <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+      <div class="flex items-center gap-4">s
+        <img src="logo.png" alt="Renessans Universiteti Logo" class="h-12 w-auto">
+        <div class="flex flex-col">
+          <div class="text-xl font-bold tracking-tighter text-blue-950 font-headline leading-none">Renessans
+            Universiteti</div>
+          <div class="text-sm font-bold text-secondary tracking-widest uppercase">Navro'z Xakatoni</div>
+        </div>
+      </div>
+      <div class="hidden md:flex space-x-8 font-headline font-semibold tracking-tight">
+        <a class="text-slate-500 hover:text-blue-700 transition-colors" href="#">Qabul</a>
+        <a class="text-slate-500 hover:text-blue-700 transition-colors" href="#">Dasturlar</a>
+        <a class="text-slate-500 hover:text-blue-700 transition-colors" href="#">Xalqaro</a>
+        <a class="text-slate-500 hover:text-blue-700 transition-colors" href="#">Talabalar hayoti</a>
+        <a class="text-slate-500 hover:text-blue-700 transition-colors" href="#">Fakultetlar</a>
+      </div>
+      <button
+        class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-headline font-bold scale-102 hover:shadow-lg transition-all">Hujjat
+        Topshirish</button>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="relative pt-32 pb-20 overflow-hidden">
+    <!-- Flying Kites (Varraklar) -->
+    <div class="absolute top-24 right-[15%] kite-animate z-20 pointer-events-none overflow-visible">
+      <div class="relative">
+        <!-- Uzbek Varrak (Kite) -->
+        <svg class="w-28 h-28 text-spring-green drop-shadow-2xl" viewBox="0 0 100 120"
+          style="filter: drop-shadow(0 0 8px rgba(74, 222, 128, 0.4));">
+          <!-- Frame/Main Body -->
+          <path d="M50 0 L95 45 L50 110 L5 45 Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor"
+            stroke-width="1.5" />
+          <!-- Crossbars -->
+          <line x1="50" y1="0" x2="50" y2="110" stroke="currentColor" stroke-width="0.8" opacity="0.6" />
+          <line x1="5" y1="45" x2="95" y2="45" stroke="currentColor" stroke-width="0.8" opacity="0.6" />
+          <!-- Tail with Bows -->
+          <path d="M50 110 c -5 10 5 15 0 25" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.8" />
+          <path d="M42 120 q 8 -5 16 0" fill="none" stroke="currentColor" stroke-width="2" />
+        </svg>
+        <!-- IP (String) connected to the Card below -->
+        <svg
+          class="absolute top-[80px] left-[50px] w-[600px] h-[800px] pointer-events-none overflow-visible opacity-20">
+          <path d="M0 0 C 50 150, 100 300, 120 500" fill="none" stroke="currentColor" stroke-width="1"
+            stroke-dasharray="4 4" class="text-slate-500 kite-string-line" />
+        </svg>
+      </div>
+    </div>
+    <div class="absolute top-60 left-[5%] kite-animate-delay z-0 pointer-events-none opacity-20">
+      <!-- Uzbek Varrak (Secondary Color) -->
+      <svg class="w-20 h-20 text-secondary" viewBox="0 0 100 120">
+        <path d="M50 0 L95 45 L50 110 L5 45 Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor"
+          stroke-width="1.5" />
+        <line x1="50" y1="0" x2="50" y2="110" stroke="currentColor" stroke-width="0.8" opacity="0.5" />
+        <line x1="5" y1="45" x2="95" y2="45" stroke="currentColor" stroke-width="0.8" opacity="0.5" />
+        <path d="M50 110 c -5 10 5 15 0 25" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7" />
+      </svg>
+    </div>
+    <!-- Swaying Blossom Branch -->
+    <div class="absolute -top-10 -right-10 branch-sway opacity-60 pointer-events-none hidden lg:block">
+      <svg class="w-64 h-64 text-spring-green/30" fill="currentColor" viewbox="0 0 200 200">
+        <path d="M180,180 C150,140 100,160 60,120 C40,100 80,60 120,40" fill="none" stroke="currentColor"
+          stroke-width="4"></path>
+        <circle cx="60" cy="120" fill="#fce7f3" r="8"></circle>
+        <circle cx="80" cy="90" fill="#fce7f3" r="6"></circle>
+        <circle cx="120" cy="40" fill="#fce7f3" r="10"></circle>
+        <circle cx="40" cy="140" fill="#4ade80" r="5"></circle>
+      </svg>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-1/2 spring-bg-ornament pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 z-10">
+        <img src="./XhnVR-removebg-preview.png" class="oneimg" alt="">
+        <span
+          class="text-on-primary-fixed-variant font-label text-sm uppercase tracking-widest font-semibold mb-4 block flex items-center gap-2">
+          <span class="text-spring-green material-symbols-outlined nav-leaf-pulse">eco</span> Kelajak Sizdan Boshlanadi
+        </span>
+        <h1 class="font-headline text-display-lg text-6xl font-extrabold text-primary leading-tight mb-6">
+          Renessans Universitetida <br /><span class="text-secondary">Navro'z Xakatoni</span>
+        </h1>
+        <p class="text-on-surface-variant text-lg max-w-xl mb-8 leading-relaxed">
+          Biz innovatsion ta'lim va zamonaviy texnologiyalarni birlashtirib, yangi avlod yetakchilarini tayyorlaymiz.
+          O'zbekistonning eng zamonaviy oliygohiga xush kelibsiz.
+        </p>
+        <div class="flex gap-4">
+          <button
+            class="bg-primary text-on-primary px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-primary-container transition-all shadow-[0_10px_20px_rgba(0,17,58,0.2)]">Xakatonda
+            Qatnashish</button>
+          <button
+            class="border-2 border-outline-variant text-primary px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-surface-container transition-all">Batafsil
+            Ma'lumot</button>
+        </div>
+      </div>
+      <div class="lg:col-span-5 relative">
+        <div
+          class="rounded-full w-full aspect-square overflow-hidden shadow-2xl border-8 border-surface-container-low relative">
+          <img class="w-full h-full object-cover"
+            data-alt="ultra modern university campus building with glass facade reflecting blue sky and manicured green lawns in foreground"
+            src="./image copy 3.png" />
+          <!-- Blossom Overlay -->
+          <div class="absolute inset-0 pointer-events-none mix-blend-screen opacity-30">
+            <div class="absolute top-10 right-10 text-white"><span
+                class="material-symbols-outlined text-4xl">filter_vintage</span></div>
+            <div class="absolute bottom-20 left-10 text-white"><span
+                class="material-symbols-outlined text-5xl">filter_vintage</span></div>
+          </div>
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl max-w-[240px]">
+          <div class="flex items-center gap-4 mb-2">
+            <span class="material-symbols-outlined text-secondary text-4xl" data-icon="school">school</span>
+            <div class="font-bold text-2xl text-primary">5000+</div>
+          </div>
+          <p class="text-sm text-on-surface-variant font-medium">Faol talabalar hamjamiyati</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="py-20 px-6 lg:px-20 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="bg-primary/5 rounded-[3rem] p-8 md:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center gap-12 border border-primary/10">
+        <div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+        <div class="w-full lg:w-1/2 relative z-10 text-left">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed mb-6">
+            <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">terminal</span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Live Competition</span>
+          </div>
+          <h2 class="font-headline font-extrabold text-4xl md:text-5xl text-on-surface mb-6 leading-tight">
+            Navro'z Hakatoni — <span class="text-secondary italic">Innovatsiyalar</span> bayrami!
+          </h2>
+          <p class="font-body text-lg text-on-surface-variant mb-10 leading-relaxed">
+            Hozirda universitetimizda talabalar o'rtasida katta texnologik musobaqa — Navro'z Hakatoni bo'lib o'tmoqda.
+            Unda yosh dasturchilar va g'oyalar egalari o'zlarining innovatsion loyihalari bilan ishtirok etishmoqda.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-bold flex items-center gap-3 shadow-lg shadow-secondary/20 hover:scale-105 transition-all">
+              <span>Ro'yxatdan o'tish</span>
+              <span class="material-symbols-outlined">rocket_launch</span>
+            </button>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4 relative z-10">
+          <div
+            class="aspect-square bg-white dark:bg-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-xl shadow-black/5 hover:-translate-y-2 transition-transform">
+            <span class="material-symbols-outlined text-primary text-5xl mb-4"
+              style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+            <span class="font-bold text-on-surface text-lg">Yangi G'oyalar</span>
+          </div>
+          <div
+            class="aspect-square bg-white dark:bg-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-xl shadow-black/5 mt-8 hover:-translate-y-2 transition-transform">
+            <span class="material-symbols-outlined text-secondary text-5xl mb-4"
+              style="font-variation-settings: 'FILL' 1;">code_blocks</span>
+            <span class="font-bold text-on-surface text-lg">Dasturlash</span>
+          </div>
+          <div
+            class="aspect-square bg-white dark:bg-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-xl shadow-black/5 -mt-8 hover:-translate-y-2 transition-transform">
+            <span class="material-symbols-outlined text-tertiary text-5xl mb-4"
+              style="font-variation-settings: 'FILL' 1;">groups</span>
+            <span class="font-bold text-on-surface text-lg">Jamoaviy Ish</span>
+          </div>
+          <div
+            class="aspect-square bg-white dark:bg-slate-800 rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-xl shadow-black/5 hover:-translate-y-2 transition-transform">
+            <span class="material-symbols-outlined text-primary-container text-5xl mb-4"
+              style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+            <span class="font-bold text-on-surface text-lg">Sovrinlar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`
+  <!-- Navro'z Shukuhu Section (Reimagined as Dynamic Experience) -->
+  <section class="py-24 relative overflow-hidden bg-white">
+    <!-- Background Animated Kites -->
+    <div class="absolute bottom-20 right-20 kite-animate z-0 pointer-events-none opacity-20 hidden lg:block">
+      <!-- Uzbek Varrak (Spring Green) -->
+      <svg class="w-32 h-32 text-spring-green" viewBox="0 0 100 120">
+        <path d="M50 0 L95 45 L50 110 L5 45 Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor"
+          stroke-width="1.5" />
+        <line x1="50" y1="0" x2="50" y2="110" stroke="currentColor" stroke-width="0.8" opacity="0.5" />
+        <line x1="5" y1="45" x2="95" y2="45" stroke="currentColor" stroke-width="0.8" opacity="0.5" />
+        <path d="M50 110 c -5 10 5 15 0 25" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7" />
+        <path d="M42 120 q 8 -5 16 0" fill="none" stroke="currentColor" stroke-width="2" />
+      </svg>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <div
+            class="inline-flex items-center gap-2 bg-spring-green/10 text-spring-green px-4 py-2 rounded-full font-bold text-xs mb-6 border border-spring-green/20">
+            <span class="material-symbols-outlined text-sm animate-spin-slow">filter_vintage</span> BAHOR AYYOMI
+          </div>
+          <h2 class="font-headline text-4xl lg:text-5xl font-extrabold text-primary mb-6 leading-tight relative">
+            Renessansda Navro'z Shukuhu: <br /><span class="text-spring-green">Bahor Ayyomi Muborak!</span>
+            <!-- Decorative Branch near Header -->
+            <div class="absolute -top-12 -left-12 branch-sway opacity-30 pointer-events-none">
+              <svg class="w-24 h-24 text-spring-green" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M12 3v10m0 0l4-4m-4 4l-4-4"></path>
+              </svg>
+            </div>
+          </h2>
+          <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+            Yangi yil, yangi kun va uyg'onish fasli — Navro'zi olamni Renessans Universiteti talabalari bilan birgalikda
+            keng nishonlamoqdamiz. Milliy urf-odatlarimiz, qadriyatlarimiz va bahoriy taomlar ifori barchamizga
+            ko'tarinki kayfiyat ulashmoqda.
+          </p>
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="group flex items-start gap-3 p-4 rounded-2xl hover:bg-spring-green/5 transition-all">
+              <span
+                class="material-symbols-outlined text-spring-green bg-spring-green/10 p-2 rounded-lg group-hover:scale-110 transition-transform">restaurant_menu</span>
+              <div>
+                <h4 class="font-bold text-primary">Sumalak &amp; Halim</h4>
+                <p class="text-xs text-on-surface-variant">Milliy oshxonamizning eng saralari.</p>
+              </div>
+            </div>
+            <div class="group flex items-start gap-3 p-4 rounded-2xl hover:bg-spring-green/5 transition-all">
+              <span
+                class="material-symbols-outlined text-spring-green bg-spring-green/10 p-2 rounded-lg group-hover:scale-110 transition-transform">groups</span>
+              <div>
+                <h4 class="font-bold text-primary">Sayillar</h4>
+                <p class="text-xs text-on-surface-variant">Talabalarimizning bayram chiqishlari.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dynamic Gallery Replacement -->
+        <div class="order-1 lg:order-2 grid grid-cols-2 gap-4 relative">
+          <!-- Floating Decorative Icons -->
+          <div class="absolute -top-10 right-0 animate-bounce text-spring-green opacity-50"><span
+              class="material-symbols-outlined text-4xl">eco</span></div>
+          <div class="absolute bottom-0 -left-10 kite-animate-delay text-secondary opacity-30"><span
+              class="material-symbols-outlined text-6xl">change_history</span></div>
+          <div class="space-y-4 pt-12">
+            <div
+              class="relative group overflow-hidden rounded-2xl shadow-lg border-4 border-blossom-pink transition-all hover:scale-102">
+              <img class="w-full h-64 object-cover" data-alt="Traditional uzbek spring festival celebration"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5I2UVtoPDXwj_D-19j-qti8a5CAes4nZ8lQ-3EzZ_VcbCQxHVFRYpCTBVXkYbXx3GDDe9oIjw64IPEC16c9-tBLocuVsjlKVQk_SWagqY4YUT2GksJONY-oF7SVZPAEYJRAPx7nUzqA1limh0I0CfhRyHvuB5PZjL2ZPlyEtPa2IF703-uvBEIxy1rp0piDladDaKKeE8dtvX49KFAAh6_eXKCblqmTJUWVBjKcLuXHgk5NE-5QZnLt20n5vvZk6Pbww6GrCkKZq_" />
+              <div
+                class="absolute inset-0 bg-spring-green/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-5xl">filter_vintage</span>
+              </div>
+            </div>
+            <div
+              class="relative group overflow-hidden rounded-2xl shadow-lg border-4 border-spring-green/20 transition-all hover:scale-102">
+              <img class="w-full h-48 object-cover" data-alt="Sumalak preparation"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO39cqXbrbRYCgohZGjTViL9LSiIXgCX4PNwfFglqmqV4PCmxNTku073QlQTtvd10zLx19rN3A__6YjN2rod-BvD4Zf1yjWXLhya318WxW3qN9yGprrNtOaPOyX_ZQ2xozF0fhjsPnC0nUfjLO0t4g1t4D46Jj-cfcCprBf-QF2WRxD8ceM7ZpZ_TUOBXrZ7YNBrPuodzRvl8tm4_SPiB7dg8sDwACWbNpGkm_6togToU2RSAiox_lTDbUH7XvpWznln595K8oqRZL" />
+              <div
+                class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-5xl">eco</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div
+              class="relative group overflow-hidden rounded-2xl shadow-lg border-4 border-spring-green/20 transition-all hover:scale-102">
+              <img class="w-full h-48 object-cover" data-alt="Spring field"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVkgLcM-5R2ZJ6z7hU-n7XzaBFnpaFoYxlmhcMeeg_w5ew4UNeu5rA_RVCrRP0avI0du_yH6FApmACg6IQJdUd6LK8BkkAx1uCzwce4-eqjjUqDzK9nuyDB5hic3n2PkV9e4aatP84WKchSgUBpW_ITnFwoFxFkXfXNZaenq88IO_ldlKMzw5d03i9QCgOCsdkFDpqGXgPOO0YCF7SUQd7_kqZqMpqKX86jgXkOlfEGyEXqbZhbP1tzvff0OiNXZ_y3B1gjo8899w_" />
+              <div
+                class="absolute inset-0 bg-spring-green/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-5xl">local_florist</span>
+              </div>
+            </div>
+            <div
+              class="relative group overflow-hidden rounded-2xl shadow-lg border-4 border-blossom-pink transition-all hover:scale-102">
+              <img class="w-full h-64 object-cover" data-alt="Students celebrating"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Anqe9Ui3AhMw18HDQ_ikbl0iOvLH8YMtXcxVxdC-VzOhEe1xebOpiEoHe_I5rc3uWTsciubXPrJ3pvkduGTY5GJuMBPnFRAXsnd40LShtJtKvwwf-2-WLt9uWFRuEGy-LhFK-jQ8btUD2Uh2xtMso30Kv8Noj6jdfaOQs-8b3qR2O0gCORUhXqZ5q2uDApwEkIJvdh6vqH77S4KChFObEY5mFB3kmh8l4e6KK-iChZb_tAg6O05q45JzQiQxhfrBr-kUCgl64G34" />
+              <div
+                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-5xl">festival</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Finland Pedagogy Lab -->
+  <section class="py-24 bg-surface-container-low relative">
+    <div class="absolute top-10 left-10 branch-sway opacity-20"><span
+        class="material-symbols-outlined text-6xl text-spring-green">eco</span></div>
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row gap-16 items-center">
+        <div class="md:w-1/2">
+          <img class="rounded-2xl shadow-lg border-8 border-surface-container-lowest" data-alt="educational workshop"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBelnmjqC0Dl6iWRqqMTKl5VUzN-9wMl0rkCyeJZ9a80GNmG3QGnQgyyG7_gx5eEQ6fPF9MiTgFpNyT-2ZrHeSiKgZMm4TMvDnDLQDxB4IMv3L73yHggveYD3LtFj9n_dFkCfG0fmLlEx-31Vog61R0V50igDGElaJr0YKbw_ZGFv71KHM54KcvsxlFlEjwNtor_Rt-cmcn-cW33bdWoHMQ2NhgnOTdtR9s92V6JZBhjuw7m4Sh_oTo1T-6SLyp31tFzHPdn0R96xiS" />
+        </div>
+        <div class="md:w-1/2">
+          <span class="text-secondary font-label text-sm font-bold uppercase tracking-widest mb-4 block">Dekabr 2023 •
+            Hamkorlik</span>
+          <h2 class="font-headline text-4xl font-bold text-primary mb-6 leading-snug">Finlyandiya Pedagogika
+            Laboratoriyasi: Kelajak
+            O'qituvchilari Markazi</h2>
+          <p class="text-on-surface-variant text-lg mb-6 leading-relaxed">
+            Finnish ekspertlari bilan hamkorlikda tashkil etilgan ushbu laboratoriya jahon andozalaridagi pedagogik
+            metodlarni joriy etadi. Biz o'qitishning eng ilg'or usullarini o'rganamiz va amaliyotga tatbiq etamiz.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-spring-green" data-icon="check_circle">check_circle</span>
+              <span class="font-medium">Finnish ta'lim standartlari</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-spring-green" data-icon="check_circle">check_circle</span>
+              <span class="font-medium">Xalqaro metodologik treninglar</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-spring-green" data-icon="check_circle">check_circle</span>
+              <span class="font-medium">Kelajak pedagoglari tayyorlov bazasi</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 bg-surface-container-low px-6 lg:px-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center gap-4 mb-16">
+        <h2 class="font-headline font-extrabold text-4xl text-on-surface shrink-0">Yutuqlar va <span
+            class="text-primary">Stipendiyalar</span></h2>
+        <div class="h-[2px] w-full bg-gradient-to-r from-primary/20 to-transparent"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Stipendiat 1 -->
+        <div
+          class="bg-surface-container-lowest p-6 rounded-[2rem] border border-outline-variant/10 hover:-translate-y-2 transition-transform duration-300">
+          <div class="aspect-square rounded-2xl overflow-hidden mb-6 relative">
+            <div
+              class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-md font-bold uppercase tracking-tighter">
+              Prezident</div>
+            <img class="w-full h-full object-cover"
+              data-alt="Close up portrait of a young Central Asian female student with a bright, determined gaze, academic library background"
+              src="./yul.png" />
+          </div>
+          <h4 class="font-bold text-lg text-on-surface mb-1">Yulduz Xayitmurotova</h4>
+          <p class="text-xs text-on-surface-variant font-medium">Prezident Davlat stipendiyasi sovrindori</p>
+        </div>
+        <!-- Stipendiat 2 -->
+        <div
+          class="bg-surface-container-lowest p-6 rounded-[2rem] border border-outline-variant/10 hover:-translate-y-2 transition-transform duration-300">
+          <div class="aspect-square rounded-2xl overflow-hidden mb-6 relative">
+            <div
+              class="absolute top-2 right-2 bg-secondary text-white text-[10px] px-2 py-1 rounded-md font-bold uppercase tracking-tighter">
+              Navoiy</div>
+            <img class="w-full h-full object-cover"
+              data-alt="Young professional woman in modern educational setting, holding a notebook, looking thoughtfully aside"
+              src="./rush.png" />
+          </div>
+          <h4 class="font-bold text-lg text-on-surface mb-1">Rushana Rustamova</h4>
+          <p class="text-xs text-on-surface-variant font-medium">Alisher Navoiy stipendiyasi sovrindori</p>
+        </div>
+        <!-- Stipendiat 3 -->
+        <div
+          class="bg-surface-container-lowest p-6 rounded-[2rem] border border-outline-variant/10 hover:-translate-y-2 transition-transform duration-300">
+          <div class="aspect-square rounded-2xl overflow-hidden mb-6 relative">
+            <div
+              class="absolute top-2 right-2 bg-tertiary text-white text-[10px] px-2 py-1 rounded-md font-bold uppercase tracking-tighter">
+              I. Karimov</div>
+            <img class="w-full h-full object-cover"
+              data-alt="Confident young Uzbek woman in business casual attire smiling at camera in a sunny courtyard"
+              src="./char.png" />
+          </div>
+          <h4 class="font-bold text-lg text-on-surface mb-1">Charosxon Yuldasheva</h4>
+          <p class="text-xs text-on-surface-variant font-medium">I. Karimov stipendiyasi sovrindori</p>
+        </div>
+        <!-- Stipendiat 4 -->
+        <div
+          class="bg-surface-container-lowest p-6 rounded-[2rem] border border-outline-variant/10 hover:-translate-y-2 transition-transform duration-300">
+          <div class="aspect-square rounded-2xl overflow-hidden mb-6 relative">
+            <div
+              class="absolute top-2 right-2 bg-primary-container text-on-primary-container text-[10px] px-2 py-1 rounded-md font-bold uppercase tracking-tighter">
+              P. Mahmud</div>
+            <img class="w-full h-full object-cover"
+              data-alt="Young energetic male student in a creative workshop environment, looking focused and creative"
+              src="./faz.png" />
+          </div>
+          <h4 class="font-bold text-lg text-on-surface mb-1">Fazliddin Egamnazarov</h4>
+          <p class="text-xs text-on-surface-variant font-medium">Pahlavon Mahmud stipendiyasi sovrindori</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Student Life & Clubs -->
+  <section class="py-24 bg-surface relative">
+    <div class="absolute bottom-10 right-10 opacity-10 branch-sway"><span
+        class="material-symbols-outlined text-6xl text-spring-green rotate-45">eco</span></div>
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-headline text-4xl font-bold text-primary mb-4">Talabalar Hayoti va Klublar</h2>
+        <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">Universitetimizda 20 dan ortiq qiziqishlarga
+          asoslangan klublar mavjud bo'lib, ular talabalarning har tomonlama rivojlanishiga xizmat qiladi.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div
+          class="md:col-span-2 bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="absolute -top-4 -right-4 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
+            <span class="material-symbols-outlined text-8xl text-spring-green">eco</span>
+          </div>
+          <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="terminal">terminal</span>
+          <h3 class="text-2xl font-bold mb-3">IT va Grafik Dizayn Klubi</h3>
+          <p class="text-on-surface-variant mb-6">Zamonaviy texnologiyalar, dasturlash va vizual san'at sirlarini
+            professional ustozlar bilan o'rganing.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-surface-container text-primary text-xs font-bold rounded-full">Python</span>
+            <span class="px-3 py-1 bg-surface-container text-primary text-xs font-bold rounded-full">UI/UX</span>
+            <span class="px-3 py-1 bg-surface-container text-primary text-xs font-bold rounded-full">Veb
+              Dasturlash</span>
+          </div>
+        </div>
+        <div class="bg-primary text-on-primary p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="material-symbols-outlined text-secondary-fixed text-4xl mb-6"
+              data-icon="translate">translate</span>
+            <h3 class="text-xl font-bold mb-2">Tillar Markazi</h3>
+            <p class="text-on-primary-container text-sm">Ingliz, Koreys, Arab tillarini noldan mukammal darajagacha
+              o'rganish imkoniyati.</p>
+          </div>
+          <div class="mt-4 flex -space-x-3 overflow-hidden">
+            <div class="w-8 h-8 rounded-full border-2 border-primary bg-slate-300"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-primary bg-slate-400"></div>
+            <div class="w-8 h-8 rounded-full border-2 border-primary bg-slate-500"></div>
+          </div>
+        </div>
+        <div class="bg-secondary-fixed text-on-secondary-fixed p-8 rounded-2xl shadow-sm">
+          <span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="campaign">campaign</span>
+          <h3 class="text-xl font-bold mb-2">Notiqlik San'ati</h3>
+          <p class="text-on-secondary-fixed-variant text-sm">Debat va notiqlik san'ati klubida o'z fikringizni erkin
+            bayon etishni o'rganing.</p>
+        </div>
+        <div class="md:col-span-4 grid grid-cols-2 md:grid-cols-6 gap-4 mt-4">
+          <div
+            class="bg-surface-container-low p-4 rounded-xl text-center hover:bg-white hover:shadow-md transition-all group">
+            <span class="material-symbols-outlined text-primary mb-2 group-hover:text-spring-green"
+              data-icon="theater_comedy">theater_comedy</span>
+            <div class="font-bold text-xs">Drama Klubi</div>
+          </div>
+          <div
+            class="bg-surface-container-low p-4 rounded-xl text-center hover:bg-white hover:shadow-md transition-all group">
+            <span class="material-symbols-outlined text-primary mb-2 group-hover:text-spring-green"
+              data-icon="history_edu">history_edu</span>
+            <div class="font-bold text-xs">Yozuvchilar Klubi</div>
+          </div>
+          <div
+            class="bg-surface-container-low p-4 rounded-xl text-center hover:bg-white hover:shadow-md transition-all group">
+            <span class="material-symbols-outlined text-primary mb-2 group-hover:text-spring-green"
+              data-icon="psychology">psychology</span>
+            <div class="font-bold text-xs">Psixologiya</div>
+          </div>
+          <div
+            class="bg-surface-container-low p-4 rounded-xl text-center hover:bg-white hover:shadow-md transition-all group">
+            <span class="material-symbols-outlined text-primary mb-2 group-hover:text-spring-green"
+              data-icon="volunteer_activism">volunteer_activism</span>
+            <div class="font-bold text-xs">Xayriya</div>
+          </div>
+          <div
+            class="bg-surface-container-low p-4 rounded-xl text-center hover:bg-white hover:shadow-md transition-all group">
+            <span class="material-symbols-outlined text-primary mb-2 group-hover:text-spring-green"
+              data-icon="camera">camera</span>
+            <div class="font-bold text-xs">Fotografiya</div>
+          </div>
+          <div
+            class="bg-surface-container-low p-4 rounded-xl text-center hover:bg-white hover:shadow-md transition-all group">
+            <span class="material-symbols-outlined text-primary mb-2 group-hover:text-spring-green"
+              data-icon="science">science</span>
+            <div class="font-bold text-xs">Ilm-fan Klubi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Scholarships -->
+  <section class="py-24 bg-surface-container-low relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-spring-green/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex items-center justify-between mb-16">
+        <div>
+          <h2 class="font-headline text-4xl font-bold text-primary mb-4">Grantlar va Imtiyozlar 2023/2024</h2>
+          <p class="text-on-surface-variant text-lg">Iqtidorli talabalarni qo'llab-quvvatlash bizning ustuvor
+            vazifamizdir.</p>
+        </div>
+        <div class="hidden md:block kite-animate">
+          <span class="material-symbols-outlined text-spring-green text-6xl opacity-40"
+            data-icon="workspace_premium">workspace_premium</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-surface-container-lowest p-8 rounded-2xl relative overflow-hidden group border border-transparent hover:border-spring-green/30 transition-all">
+          <div class="absolute top-0 right-0 p-4 bg-spring-green text-white font-bold text-xs rounded-bl-xl">100% GRANT
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-4">Renessans Granti</h3>
+          <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Eng yuqori ball to'plagan 50 nafar talaba
+            uchun to'liq bepul o'qish imkoniyati.</p>
+          <div class="border-t border-outline-variant/20 pt-4 flex items-center justify-between">
+            <span class="text-xs font-semibold text-on-surface-variant">Qabul tugadi</span>
+            <span class="material-symbols-outlined text-spring-green group-hover:translate-x-1 transition-transform"
+              data-icon="arrow_forward">arrow_forward</span>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-2xl relative overflow-hidden group border border-transparent hover:border-spring-green/30 transition-all">
+          <h3 class="text-xl font-bold text-primary mb-4">IELTS 7+ &amp; Topik 5+</h3>
+          <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Xalqaro til sertifikatiga ega bo'lgan
+            talabalar uchun maxsus chegirmalar va stipendiyalar.</p>
+          <div class="border-t border-outline-variant/20 pt-4 flex items-center justify-between">
+            <span class="text-xs font-semibold text-spring-green">Hujjat topshirish ochiq</span>
+            <span class="material-symbols-outlined text-spring-green group-hover:translate-x-1 transition-transform"
+              data-icon="arrow_forward">arrow_forward</span>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-2xl relative overflow-hidden group border border-transparent hover:border-spring-green/30 transition-all">
+          <h3 class="text-xl font-bold text-primary mb-4">Prezident Stipendiyasi Nomzodlari</h3>
+          <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Prezident stipendiyasiga nomzod bo'lgan
+            iqtidorli talabalar uchun rag'batlantiruvchi mukofotlar.</p>
+          <div class="border-t border-outline-variant/20 pt-4 flex items-center justify-between">
+            <span class="text-xs font-semibold text-on-surface-variant">Batafsil ma'lumot</span>
+            <span class="material-symbols-outlined text-spring-green group-hover:translate-x-1 transition-transform"
+              data-icon="arrow_forward">arrow_forward</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- International Horizon -->
+  <section class="py-24 bg-surface relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="font-headline text-4xl font-bold text-primary mb-4">Xalqaro Hamkorlik Ufqlar</h2>
+        <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">London yoki Turkiyada ta'lim olishni davom ettirish
+          imkoniyati.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div
+          class="bg-white/40 backdrop-blur-md p-10 rounded-3xl border border-white/50 shadow-xl relative overflow-hidden group">
+          <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
+          <img class="w-full h-48 object-cover rounded-2xl mb-8 group-hover:scale-105 transition-transform duration-500"
+            data-alt="london landscape"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdn_6ojjU_vZHSrREgyFFDvJcCdldealXd4ZFtl9y5__rwcqGrJkMepKaWezs4wVapY96RPdnZEVF2o492Z662NdO59yxy77HnsIG73YC8PiTGbQgTw4QInmknbFHkvQDu8m1CeIFURR9L5PwjS0JS7HUGfquZskMnuYohOZtt7Yps6JfDdV1aCHDhPpZsMqSkQnhr0EfHiEHkJMJfil8349wDHHbw3fVF2BsmV5SipA-NS3uV5vbPaUTk5TfUmL_FtDLFawQ5G0Fp" />
+          <h3 class="text-2xl font-bold text-primary mb-4">Grinvich Universiteti (Buyuk Britaniya)</h3>
+          <p class="text-on-surface-variant mb-6 font-medium">2+2 va 3+1 dasturlari orqali Londonda o'qish imkoniyati.
+            Diplom butun dunyoda tan olinadi.</p>
+          <div class="flex items-center gap-4 text-primary font-bold">
+            <span class="material-symbols-outlined text-spring-green" data-icon="public">public</span>
+            <span>London, Buyuk Britaniya</span>
+          </div>
+        </div>
+        <div
+          class="bg-white/40 backdrop-blur-md p-10 rounded-3xl border border-white/50 shadow-xl relative overflow-hidden group">
+          <div class="absolute -top-10 -right-10 w-40 h-40 bg-spring-green/10 rounded-full blur-3xl"></div>
+          <img class="w-full h-48 object-cover rounded-2xl mb-8 group-hover:scale-105 transition-transform duration-500"
+            data-alt="turkish library" src="./image copy 2.png" />
+          <h3 class="text-2xl font-bold text-primary mb-4">Turkiya OTMlari bilan Hamkorlik</h3>
+          <p class="text-on-surface-variant mb-6 font-medium">Niğde Ömer Halisdemir va Kastamonu universitetlari bilan
+            Magistratura va Almashinuv dasturlari.</p>
+          <div class="flex items-center gap-4 text-primary font-bold">
+            <span class="material-symbols-outlined text-spring-green" data-icon="handshake">handshake</span>
+            <span>Akademik almashinuv</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Sports & Zakovat -->
+  <section class="py-24 bg-surface-container-low relative">
+    <div class="absolute top-20 left-10 opacity-10 kite-animate"><span
+        class="material-symbols-outlined text-8xl text-spring-green">change_history</span></div>
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-4">
+          <h2 class="font-headline text-4xl font-bold text-primary mb-6">Sport va Dam Olish</h2>
+          <p class="text-on-surface-variant mb-8 text-lg">Sog'lom tanda sog'lom aql. Bizning bepul sport to'garaklarimiz
+            talabalarni kutmoqda.</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div
+              class="flex items-center gap-2 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+              <span class="material-symbols-outlined text-spring-green" data-icon="sports_soccer">sports_soccer</span>
+              <span class="font-bold text-sm">Futbol</span>
+            </div>
+            <div
+              class="flex items-center gap-2 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+              <span class="material-symbols-outlined text-spring-green"
+                data-icon="sports_basketball">sports_basketball</span>
+              <span class="font-bold text-sm">Basketbol</span>
+            </div>
+            <div
+              class="flex items-center gap-2 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+              <span class="material-symbols-outlined text-spring-green"
+                data-icon="sports_volleyball">sports_volleyball</span>
+              <span class="font-bold text-sm">Voleybol</span>
+            </div>
+            <div
+              class="flex items-center gap-2 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+              <span class="material-symbols-outlined text-spring-green" data-icon="sports_tennis">sports_tennis</span>
+              <span class="font-bold text-sm">Stol Tennisi</span>
+            </div>
+            <div
+              class="flex items-center gap-2 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+              <span class="material-symbols-outlined text-spring-green" data-icon="chess">chess</span>
+              <span class="font-bold text-sm">Shaxmat</span>
+            </div>
+            <div
+              class="flex items-center gap-2 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+              <span class="material-symbols-outlined text-spring-green" data-icon="view_comfy">view_comfy</span>
+              <span class="font-bold text-sm">Shashka</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:col-span-8 bg-primary-container text-on-primary rounded-3xl p-12 relative overflow-hidden flex flex-col justify-center border-b-8 border-spring-green">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-spring-green/20 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+          <div class="absolute bottom-4 right-4 opacity-30 animate-spin-slow"><span
+              class="material-symbols-outlined text-9xl text-white">filter_vintage</span></div>
+          <span class="text-spring-green font-bold text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
+            <span class="material-symbols-outlined text-xs">calendar_today</span> Aprel/May 2024
+          </span>
+          <h2 class="text-4xl font-headline font-extrabold mb-6">Zakovat Turnirlari</h2>
+          <p class="text-lg text-primary-fixed mb-8 max-w-xl">Universitet hovlisida barcha fakultetlar o'rtasida
+            shiddatli intellektual janglar. Bilimingizni sinovdan o'tkazing va g'oliblik shohsupasini egallang.</p>
+          <div class="flex gap-4">
+            <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10 text-center flex-1">
+              <div class="text-3xl font-bold mb-1">20+</div>
+              <div class="text-xs uppercase opacity-70">Jamoalar</div>
+            </div>
+            <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10 text-center flex-1">
+              <div class="text-3xl font-bold mb-1">5</div>
+              <div class="text-xs uppercase opacity-70">Fakultetlar</div>
+            </div>
+            <div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10 text-center flex-1">
+              <div class="text-3xl font-bold mb-1">Asosiy</div>
+              <div class="text-xs uppercase opacity-70">Hovli</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Infrastructure -->
+  <section class="py-24 bg-surface relative">
+    <div class="absolute top-10 right-10 opacity-5 branch-sway"><span
+        class="material-symbols-outlined text-[200px] text-spring-green">eco</span></div>
+    <div class="max-w-7xl mx-auto px-8">
+      <h2 class="font-headline text-4xl font-bold text-primary mb-16 text-center">Zamonaviy Infratuzilma</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group cursor-pointer">
+          <div
+            class="overflow-hidden rounded-2xl mb-6 shadow-lg border-b-4 border-transparent group-hover:border-spring-green transition-all">
+            <img class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+              data-alt="smart campus office"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3LgjeIHSxxCtZ8MUKg7XxKyTbe_kAygBy6u3a3LoMYUIMDQ_E6D3rKtmI_8-PFZSp33qhfOFJ__FQLugfrbx4OJee3te5hk4mHgFgPZ0wYp8uBV0yrwUtkE580czpni_zTmrlxTraPu9qv44M3cvhCQgYoDXYflA5ysNZJH5ogvFnZtUR-lt5kI8Tuti1nh4x9L531XCGwPlspMTSedH1cxG8qymBeqWXpr0HtoTeziUfytdHVT4cTOrRTLclWIDTbIq7jK_pS9BK" />
+          </div>
+          <h3 class="text-2xl font-bold text-primary mb-2">Aqlli Kampus</h3>
+          <p class="text-on-surface-variant">Eng so'nggi texnologiyalar bilan jihozlangan o'quv xonalari va
+            laboratoriyalar.</p>
+        </div>
+        <div class="group cursor-pointer">
+          <div
+            class="overflow-hidden rounded-2xl mb-6 shadow-lg border-b-4 border-transparent group-hover:border-spring-green transition-all">
+            <img class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+              data-alt="main campus building"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLdAalVHIXtY8gWzYnV5IVgVq09TCfUp7_CKnJEf_4R8ius6pSBvNMvoC8kWj2Ui4rb1zqyEFQ3qFCAMUxuz0u8f_4TfJu9eq_qd4IH6SGGxPWmecYmzmc6IcPGogeb1fp1RkS9nusNS37Nuer08bFunIMe7w7x-By7sU6AVT84L1tG6sffRm-mJ8dYO5yeV9P2UCegxQEcySLRK2jgrHui9LtCqKm91fRCuwu4KyKZF3TVQ6kGKAujO9jdD5nkyJ5ToLgR658JLZ5" />
+          </div>
+          <h3 class="text-2xl font-bold text-primary mb-2">Asosiy Kampus</h3>
+          <p class="text-on-surface-variant">Akademik faoliyatning asosi, keng kutubxona va anjumanlar zali.</p>
+        </div>
+        <div class="group cursor-pointer">
+          <div
+            class="overflow-hidden rounded-2xl mb-6 shadow-lg border-b-4 border-transparent group-hover:border-spring-green transition-all">
+            <img class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+              data-alt="student housing"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBELCrEdmhqW9MbWMFndhri_u90ZazJyN_Yd9-4mbRR_NOHPcmI9zArVzxdTyBY29Il--Sl9IBMU5MYoTWD5Tt10FYveIx1WFxFtZYYtxjltA9yjB_Uk8OJAwTeOQJbQi2bm6wdUi8uGutOmbra3worRAi6mFGJY_0heIAc4QJ0guOOVfNlVIfnNadg6c-Gvds82uNfO9IIwyyIYrKVKSrG3Md--Awi7JOtQ_PqrK7jvQt3ZQj3ojkJ1cGUv6m8UQLRGGGEBDY81S9Z" />
+          </div>
+          <h3 class="text-2xl font-bold text-primary mb-2">Talabalar Turar Joyi</h3>
+          <p class="text-on-surface-variant">Xalqaro standartlarga javob beradigan barcha qulayliklarga ega yotoqxona.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 bg-surface-container-low px-6 lg:px-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div>
+          <span class="font-label text-secondary font-bold uppercase tracking-widest block mb-4">Yangi Bosqich</span>
+          <h2 class="font-headline font-extrabold text-4xl text-on-surface">Mas'uliyatli <span
+              class="text-primary">Tayinlovlar</span></h2>
+        </div>
+        <div class="kite-string hidden md:block flex-1 mx-12 mb-4"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Prorektor 1 -->
+        <div
+          class="bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col md:flex-row gap-8 items-center hover:shadow-xl transition-shadow group border border-outline-variant/10">
+          <div class="w-48 h-48 rounded-2xl overflow-hidden flex-shrink-0 relative">
+            <div
+              class="absolute inset-0 border-4 border-primary/20 rounded-2xl z-10 group-hover:border-primary transition-colors">
+            </div>
+            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              data-alt="Professional portrait of a middle-aged academic man in a formal suit, confident expression, neutral university office background"
+              src="./image copy.png" />
+          </div>
+          <div>
+            <h3 class="font-headline font-bold text-2xl text-on-surface mb-2">Akmaljon Umirzakov</h3>
+            <p class="text-primary font-semibold mb-4">Ilmiy ishlar va innovatsiyalar bo‘yicha prorektor</p>
+            <p class="text-on-surface-variant text-sm leading-relaxed italic">"Universitetimizning ilmiy salohiyatini
+              yangi bosqichga olib chiqish asosiy maqsadimizdir."</p>
+          </div>
+        </div>
+        <!-- Prorektor 2 -->
+        <div
+          class="bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col md:flex-row gap-8 items-center hover:shadow-xl transition-shadow group border border-outline-variant/10">
+          <div class="w-48 h-48 rounded-2xl overflow-hidden flex-shrink-0 relative">
+            <div
+              class="absolute inset-0 border-4 border-secondary/20 rounded-2xl z-10 group-hover:border-secondary transition-colors">
+            </div>
+            <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              data-alt="Portrait of an elegant academic professional male, international business attire, smiling warmly, library background"
+              src="./image copy 4.png" />
+          </div>
+          <div>
+            <h3 class="font-headline font-bold text-2xl text-on-surface mb-2">Bekzod Rozimov</h3>
+            <p class="text-secondary font-semibold mb-4">Xalqaro hamkorlik bo‘yicha prorektor</p>
+            <p class="text-on-surface-variant text-sm leading-relaxed italic">"Xalqaro aloqalarni kengaytirish -
+              talabalarimiz uchun jahon darajasidagi imkoniyat eshigidir."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="py-16 bg-white border-t border-surface-container">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-4">
+          <img src="logo.png" alt="Renessans Logo" class="h-16 w-auto">
+          <div class="text-left">
+            <div class="text-2xl font-bold text-primary font-headline">Renessans Universiteti</div>
+            <p class="text-on-surface-variant font-medium text-sm italic">Navro'z Xakatoni — 2024</p>
+          </div>
+        </div>
+        <div class="flex gap-8 text-on-surface-variant font-semibold">
+          <a href="#" class="hover:text-primary transition-colors">Biz Haqimizda</a>
+          <a href="#" class="hover:text-primary transition-colors">Aloqa</a>
+          <a href="#" class="hover:text-primary transition-colors">Grantlar</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="material-symbols-outlined text-secondary">location_on</span>
+          <span class="text-on-surface-variant text-sm font-medium">Toshkent sh., Yunusobod tumani</span>
+        </div>
+      </div>
+      <div
+        class="mt-12 pt-8 border-t border-surface-container text-center text-on-surface-variant text-xs font-bold uppercase tracking-widest">
+        &copy; 2024 Renessans Universiteti. Barcha huquqlar himoyalangan.
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
